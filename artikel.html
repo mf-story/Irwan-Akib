@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tulisan." />
+  <title>Tulisan — Profil Dosen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">PD</span>
+        <span class="brand-name">Profil Dosen<small>Nama Lengkap, Gelar</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#about">Fokus</a>
+        <a href="index.html#profile">Tentang</a>
+        <a href="index.html#works">Karya</a>
+        <a href="tulisan.html">Tulisan</a>
+        <a href="index.html#contact" class="nav-cta">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <article class="reader">
+    <div class="container">
+      <a class="reader-back" href="tulisan.html">← Kembali ke daftar tulisan</a>
+      <div id="readerRoot"></div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span id="footerText">Profil Dosen</span></p>
+      <a href="tulisan.html" class="to-top">Tulisan lainnya →</a>
+    </div>
+  </footer>
+
+  <script src="artikel.js"></script>
+</body>
+</html>

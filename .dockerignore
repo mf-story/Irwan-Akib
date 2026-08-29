@@ -1,0 +1,30 @@
+.git
+.gitignore
+.gitattributes
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.env
+.env.*
+
+# Berkas lokal (Windows launcher & doc)
+Jalankan Server.bat
+Buka Akses HP.bat
+*.md
+
+# Konfigurasi rahasia & data lokal — WAJIB dikecualikan dari image
+data/admin.config.json
+admin.config.json
+_update.js
+_strip.js
+
+# Berkas sumber pribadi (CV/foto besar)
+*.pdf
+*.docx
+*.tmp.docx
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store

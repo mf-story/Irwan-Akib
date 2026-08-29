@@ -1,0 +1,14 @@
+{
+  "name": "profil-untuk-dosen",
+  "version": "1.0.0",
+  "description": "Situs profil akademik dan ruang tulisan untuk dosen — template dengan tampilan bertema tosca dan admin CMS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "license": "UNLICENSED"
+}

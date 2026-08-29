@@ -1,0 +1,24 @@
+# Node
+node_modules/
+
+# Konfigurasi rahasia (hash password admin) — jangan disebar
+admin.config.json
+data/admin.config.json
+
+# Berkas sumber pribadi
+*.pdf
+*.docx
+*.tmp.docx
+
+# Skrip pembantu sementara
+_update.js
+_strip.js
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Catatan: foto di uploads/ SENGAJA di-commit sebagai seed untuk deployment.
+# Bila unggahan terlalu besar (>100 MB / file, atau folder >1 GB), pertimbangkan
+# storage eksternal (S3, Cloudflare R2) — lihat catatan di README.
