@@ -70,6 +70,15 @@
       hero.classList.add("has-avatar");
       hero.style.setProperty("--hero-photo", `url('${bg.replace(/'/g, "\\'")}')`);
     }
+    if (hero && h.backgroundOpacity != null && h.backgroundOpacity !== "") {
+      // 100 = foto sepenuhnya terlihat (overlay minim), 0 = foto tersembunyi (overlay penuh)
+      const bo = Math.max(0, Math.min(100, Number(h.backgroundOpacity)));
+      const base = 1 - bo / 100;
+      const min = Math.max(0, base - 0.1).toFixed(3);
+      const max = Math.min(1, base + 0.1).toFixed(3);
+      hero.style.setProperty("--hero-overlay-min", min);
+      hero.style.setProperty("--hero-overlay-max", max);
+    }
     const text = document.querySelector(".hero-text");
     if (text) {
       text.innerHTML = `

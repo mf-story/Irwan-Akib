@@ -125,6 +125,7 @@ const SCHEMA = [
     { key: "btnGhostHref", type: "select", label: "Tombol kedua menuju", options: HREF_OPTS },
     { key: "avatarImage", type: "photo", label: "Foto Profil" },
     { key: "backgroundImage", type: "photo", label: "Gambar Latar Hero (bagian atas)" },
+    { key: "backgroundOpacity", type: "number", label: "Opacity Gambar Latar (0 = gelap total, 100 = foto penuh)" },
     { key: "stats", type: "list", label: "Statistik", item: [
       { key: "count", type: "number", label: "Angka" },
       { key: "label", type: "text", label: "Label" },

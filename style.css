@@ -218,7 +218,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, .55), rgba(15, 23, 42, .75)),
+    linear-gradient(135deg, rgba(15, 23, 42, var(--hero-overlay-min, .55)), rgba(15, 23, 42, var(--hero-overlay-max, .75))),
     radial-gradient(1200px 600px at 80% 20%, rgba(201, 162, 39, .25), transparent 60%),
     url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
@@ -227,7 +227,7 @@ img { max-width: 100%; display: block; }
 }
 .hero.has-avatar .hero-bg {
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, .55), rgba(15, 23, 42, .82)),
+    linear-gradient(135deg, rgba(15, 23, 42, var(--hero-overlay-min, .55)), rgba(15, 23, 42, var(--hero-overlay-max, .82))),
     radial-gradient(1200px 600px at 80% 20%, rgba(201, 162, 39, .25), transparent 60%),
     var(--hero-photo) center/cover no-repeat;
 }

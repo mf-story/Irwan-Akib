@@ -24,6 +24,8 @@
     "btnGhost": "Karya Ilmiah",
     "btnGhostHref": "#works",
     "avatarImage": "uploads/img-1788022163500-87fcb9.jpg",
+    "backgroundImage": "uploads/img-1788022166212-8623ae.jpg",
+    "backgroundOpacity": 15,
     "stats": [
       {
         "count": 111,
@@ -37,8 +39,7 @@
         "count": 12,
         "label": "h-index"
       }
-    ],
-    "backgroundImage": "uploads/img-1788022166212-8623ae.jpg"
+    ]
   },
   "about": {
     "tag": "01 — Tentang",
