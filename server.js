@@ -563,12 +563,64 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // ---- Halaman artikel: sisipkan Open Graph (thumbnail saat dibagikan) ----
+  if (req.method === "GET" && url === "/artikel.html" && query.get("slug")) {
+    return serveArticleHtml(req, res, query.get("slug"));
+  }
+
   // ---- File statis ----
   if (req.method === "GET") return serveStatic(req, res);
 
   res.writeHead(405);
   res.end("Method Not Allowed");
 });
+
+// Sajikan artikel.html dengan meta Open Graph/Twitter yang terisi dari data artikel,
+// sehingga WhatsApp/Facebook/X menampilkan judul, ringkasan, dan gambar sampul.
+function serveArticleHtml(req, res, slug) {
+  try {
+    const arts = readJsonFile(ARTICLES_FILE, []);
+    const a = arts.find((x) => x && x.slug === slug && x.published !== false);
+    let html = fs.readFileSync(path.join(ROOT, "artikel.html"), "utf8");
+    if (a) {
+      const fwdProto = String(req.headers["x-forwarded-proto"] || "").split(",")[0].trim();
+      const proto = fwdProto || (req.socket && req.socket.encrypted ? "https" : "http");
+      const host = req.headers["x-forwarded-host"] || req.headers.host || "";
+      const base = proto + "://" + host;
+      const content = readJsonFile(CONTENT_FILE, {});
+      const siteName = (content.brand && content.brand.name) || "Profil Dosen";
+      const fallbackImg = (content.hero && content.hero.avatarImage) || "";
+      const rawImg = a.cover || fallbackImg;
+      const imgUrl = rawImg
+        ? (/^https?:\/\//i.test(rawImg) ? rawImg : base + "/" + String(rawImg).replace(/^\/+/, ""))
+        : "";
+      const title = a.title || siteName;
+      const desc = (a.excerpt || String(a.bodyHtml || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()).slice(0, 200);
+      const pageUrl = base + "/artikel.html?slug=" + encodeURIComponent(slug);
+      const E = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      const meta = [
+        `<meta property="og:type" content="article" />`,
+        `<meta property="og:site_name" content="${E(siteName)}" />`,
+        `<meta property="og:title" content="${E(title)}" />`,
+        `<meta property="og:description" content="${E(desc)}" />`,
+        imgUrl ? `<meta property="og:image" content="${E(imgUrl)}" />` : "",
+        imgUrl ? `<meta property="og:image:alt" content="${E(title)}" />` : "",
+        `<meta property="og:url" content="${E(pageUrl)}" />`,
+        `<meta name="twitter:card" content="${imgUrl ? "summary_large_image" : "summary"}" />`,
+        `<meta name="twitter:title" content="${E(title)}" />`,
+        `<meta name="twitter:description" content="${E(desc)}" />`,
+        imgUrl ? `<meta name="twitter:image" content="${E(imgUrl)}" />` : "",
+      ].filter(Boolean).join("\n  ");
+      html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${E(title)} — ${E(siteName)}</title>`);
+      html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${E(desc)}" />`);
+      html = html.replace("</head>", "  " + meta + "\n</head>");
+    }
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" });
+    return res.end(html);
+  } catch (e) {
+    return serveStatic(req, res);
+  }
+}
 
 function stripBody(a) {
   const { bodyHtml, ...rest } = a;
