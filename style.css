@@ -1,14 +1,14 @@
-﻿/* =========================================================
-   Profil Dosen â€” Tema "Eltorus-like"
+/* =========================================================
+   Profil Dosen — Tema "Eltorus-like"
    Palet: dark navy + tosca + putih
    ========================================================= */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --accent: #c9a227;
-  --accent-dark: #a67c00;
-  --accent-soft: #fbecc4;
+  --accent: #e0b53c;
+  --accent-dark: #b58f22;
+  --accent-soft: #faeec9;
   --dark: #0f172a;
   --dark2: #1e293b;
   --text: #475569;
@@ -97,7 +97,7 @@ img { max-width: 100%; display: block; }
   color: #fff; font-weight: 700; font-size: 15px;
   display: inline-flex; align-items: center; justify-content: center;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(201, 162, 39, .35);
+  box-shadow: 0 6px 16px rgba(224, 181, 60, .35);
 }
 .brand-badge img { width: 100%; height: 100%; object-fit: cover; }
 .brand-name {
@@ -124,14 +124,14 @@ img { max-width: 100%; display: block; }
   letter-spacing: .01em;
 }
 .navbar.scrolled .nav-links a { color: var(--text); }
-.nav-links a:hover { color: var(--accent); background: rgba(201, 162, 39, .08); }
+.nav-links a:hover { color: var(--accent); background: rgba(224, 181, 60, .08); }
 .nav-links .nav-cta {
   background: var(--accent);
   color: #fff !important;
   padding: 10px 22px;
   margin-left: 8px;
   border-radius: 999px;
-  box-shadow: 0 6px 14px rgba(201, 162, 39, .35);
+  box-shadow: 0 6px 14px rgba(224, 181, 60, .35);
 }
 .nav-links .nav-cta:hover { background: var(--accent-dark); }
 
@@ -176,12 +176,12 @@ img { max-width: 100%; display: block; }
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 10px 22px rgba(201, 162, 39, .35);
+  box-shadow: 0 10px 22px rgba(224, 181, 60, .35);
 }
 .btn-primary:hover {
   background: var(--accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(201, 162, 39, .45);
+  box-shadow: 0 14px 28px rgba(224, 181, 60, .45);
   color: #fff;
 }
 .btn-ghost {
@@ -219,7 +219,7 @@ img { max-width: 100%; display: block; }
   position: absolute; inset: 0;
   background:
     linear-gradient(135deg, rgba(15, 23, 42, var(--hero-overlay-min, .55)), rgba(15, 23, 42, var(--hero-overlay-max, .75))),
-    radial-gradient(1200px 600px at 80% 20%, rgba(201, 162, 39, .25), transparent 60%),
+    radial-gradient(1200px 600px at 80% 20%, rgba(224, 181, 60, .25), transparent 60%),
     url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
@@ -228,7 +228,7 @@ img { max-width: 100%; display: block; }
 .hero.has-avatar .hero-bg {
   background:
     linear-gradient(135deg, rgba(15, 23, 42, var(--hero-overlay-min, .55)), rgba(15, 23, 42, var(--hero-overlay-max, .82))),
-    radial-gradient(1200px 600px at 80% 20%, rgba(201, 162, 39, .25), transparent 60%),
+    radial-gradient(1200px 600px at 80% 20%, rgba(224, 181, 60, .25), transparent 60%),
     var(--hero-photo) center/cover no-repeat;
 }
 .hero-overlay {
@@ -251,9 +251,9 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   margin-bottom: 20px;
   padding: 6px 14px;
-  border: 1px solid rgba(201, 162, 39, .5);
+  border: 1px solid rgba(224, 181, 60, .5);
   border-radius: 999px;
-  background: rgba(201, 162, 39, .1);
+  background: rgba(224, 181, 60, .1);
 }
 .hero-text h1 {
   color: #fff;
@@ -405,7 +405,7 @@ img { max-width: 100%; display: block; }
   background: var(--accent-soft);
   color: var(--accent-dark);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, .35);
+  box-shadow: inset 0 0 0 1px rgba(224, 181, 60, .35);
   transition: transform .3s ease, background .3s ease;
 }
 .feature-item:hover .feature-ico {
@@ -467,7 +467,7 @@ img { max-width: 100%; display: block; }
   border-radius: 8px;
   letter-spacing: .04em;
   text-transform: uppercase;
-  box-shadow: 0 10px 22px rgba(201, 162, 39, .45);
+  box-shadow: 0 10px 22px rgba(224, 181, 60, .45);
 }
 .profile-text .section-tag { padding: 0; }
 .profile-text .section-tag::before,
@@ -520,7 +520,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   background: #fff;
   border: 4px solid var(--accent);
-  box-shadow: 0 0 0 4px rgba(201, 162, 39, .18);
+  box-shadow: 0 0 0 4px rgba(224, 181, 60, .18);
 }
 .tl-card {
   background: #fff;
@@ -590,7 +590,7 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: center;
   font-size: 1.4rem;
   margin-bottom: 18px;
-  box-shadow: 0 8px 18px rgba(201, 162, 39, .3);
+  box-shadow: 0 8px 18px rgba(224, 181, 60, .3);
 }
 .edu-date {
   display: inline-block;
@@ -963,7 +963,7 @@ body.lb-open { overflow: hidden; }
 .search-box input:focus {
   outline: 0;
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(201, 162, 39, .15);
+  box-shadow: 0 0 0 4px rgba(224, 181, 60, .15);
 }
 .cat-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .cat-chip {
@@ -1005,7 +1005,7 @@ body.lb-open { overflow: hidden; }
 .contact-row .ci {
   width: 44px; height: 44px;
   border-radius: 12px;
-  background: rgba(201, 162, 39, .18);
+  background: rgba(224, 181, 60, .18);
   color: var(--accent);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.15rem;
@@ -1024,7 +1024,7 @@ body.lb-open { overflow: hidden; }
 .socials a {
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: rgba(201, 162, 39, .18);
+  background: rgba(224, 181, 60, .18);
   color: var(--accent);
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 600; font-size: .82rem;
@@ -1059,7 +1059,7 @@ body.lb-open { overflow: hidden; }
 .field textarea:focus {
   outline: 0;
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(201, 162, 39, .15);
+  box-shadow: 0 0 0 4px rgba(224, 181, 60, .15);
 }
 .field label {
   position: absolute;
@@ -1194,7 +1194,7 @@ body.lb-open { overflow: hidden; }
   border: 0;
   font-size: 1.15rem;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(201, 162, 39, .45);
+  box-shadow: 0 10px 24px rgba(224, 181, 60, .45);
   transition: transform .2s;
 }
 .nav-dock button:hover { transform: translateY(-3px); }
