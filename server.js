@@ -613,8 +613,12 @@ function serveHtmlWithOg(req, res, file, kind, slug) {
     const hero = content.hero || {};
     const siteName = brand.name || "Profil";
     const profileImg = ogAbs(base, hero.avatarImage);
+    // Kartu share 1200x630 (foto + nama) agar preview tampil besar.
+    const cardExists = fs.existsSync(path.join(UPLOADS_DIR, "og-card.jpg"));
+    const cardImg = cardExists ? ogAbs(base, "uploads/og-card.jpg") : profileImg;
+    const shortDesc = [hero.kicker, "Universitas Muhammadiyah Makassar"].filter(Boolean).join(", ");
 
-    let title, desc, image, url, type;
+    let title, desc, image, url, type, bigCard;
     if (kind === "article") {
       const arts = readJsonFile(ARTICLES_FILE, []);
       const a = arts.find((x) => x && x.slug === slug && x.published !== false);
@@ -624,20 +628,23 @@ function serveHtmlWithOg(req, res, file, kind, slug) {
       }
       title = a.title || siteName;
       desc = (a.excerpt || String(a.bodyHtml || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()).slice(0, 200);
-      image = ogAbs(base, a.cover) || profileImg;
+      image = ogAbs(base, a.cover) || cardImg;
+      bigCard = !a.cover;
       url = base + "/artikel.html?slug=" + encodeURIComponent(slug);
       type = "article";
       html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${ogEsc(title)} — ${ogEsc(siteName)}</title>`);
     } else if (kind === "tulisan") {
       title = "Ruang Tulisan — " + siteName;
-      desc = metaC.description || "Kumpulan tulisan, gagasan, dan pandangan.";
-      image = profileImg;
+      desc = shortDesc;
+      image = cardImg;
+      bigCard = cardExists;
       url = base + "/tulisan.html";
       type = "website";
     } else {
       title = metaC.title || (siteName + (brand.credential ? ", " + brand.credential : ""));
-      desc = metaC.description || "";
-      image = profileImg;
+      desc = shortDesc;
+      image = cardImg;
+      bigCard = cardExists;
       url = base + "/";
       type = "website";
     }
@@ -648,6 +655,8 @@ function serveHtmlWithOg(req, res, file, kind, slug) {
       `<meta property="og:title" content="${ogEsc(title)}" />`,
       `<meta property="og:description" content="${ogEsc(desc)}" />`,
       image ? `<meta property="og:image" content="${ogEsc(image)}" />` : "",
+      image && bigCard ? `<meta property="og:image:width" content="1200" />` : "",
+      image && bigCard ? `<meta property="og:image:height" content="630" />` : "",
       image ? `<meta property="og:image:alt" content="${ogEsc(title)}" />` : "",
       `<meta property="og:url" content="${ogEsc(url)}" />`,
       `<meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}" />`,
