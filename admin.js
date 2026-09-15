@@ -493,6 +493,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $("#logoutBtn").addEventListener("click", logout);
   $("#saveContentBtn").addEventListener("click", saveContent);
+  $("#saveContentFab").addEventListener("click", saveContent);
   $("#scholarBtn").addEventListener("click", syncScholar);
   $("#changePassBtn").addEventListener("click", changePassword);
 

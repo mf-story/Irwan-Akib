@@ -67,6 +67,11 @@ img { max-width: 100%; display: block; }
 .panel { display: none; }
 .panel.active { display: block; }
 
+/* Tombol simpan melayang di panel Profil */
+.fab-save { position: fixed; bottom: 26px; right: 26px; z-index: 260; background: var(--gold-600); color: #fff; font-family: var(--sans); font-weight: 700; font-size: .95rem; padding: 14px 26px; border: none; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.22); transition: transform .18s, box-shadow .18s, background .18s; }
+.fab-save:hover { background: var(--navy-900); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,.28); }
+.fab-save:active { transform: translateY(0); }
+
 .toast { position: fixed; bottom: 24px; right: 24px; background: var(--navy-900); color: #fff; padding: 14px 20px; border-radius: 12px; box-shadow: var(--shadow); font-size: .9rem; opacity: 0; transform: translateY(12px); transition: .3s; z-index: 300; }
 .toast.show { opacity: 1; transform: none; }
 .toast.ok { background: var(--ok); }
