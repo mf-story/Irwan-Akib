@@ -199,7 +199,13 @@
     if (w.sintaUrl) scholarLinks.push(`<a class="btn btn-ghost" href="${esc(w.sintaUrl)}" target="_blank" rel="noopener">${esc(w.sintaBtn || "SINTA ↗")}</a>`);
     if (w.scopusUrl) scholarLinks.push(`<a class="btn btn-ghost" href="${esc(w.scopusUrl)}" target="_blank" rel="noopener">${esc(w.scopusBtn || "Scopus ↗")}</a>`);
     const PUB_LIMIT = 8;
-    const pubs = w.publications || [];
+    // Selalu tampilkan dari tahun terbaru, apa pun urutan tersimpan (mis. hasil sinkron Scholar).
+    const pubYear = (p) => {
+      const n = ((String(p.meta || "") + " " + String(p.title || "")).match(/\b(19|20)\d{2}\b/g) || [])
+        .map(Number).filter((y) => y >= 1970 && y <= 2035);
+      return n.length ? Math.max(...n) : -1;
+    };
+    const pubs = (w.publications || []).slice().sort((a, b) => pubYear(b) - pubYear(a));
     const pubCard = (p, i) => {
       const cm = String(p.meta || "").match(/·\s*([\d.,]+)\s*sitasi/i);
       const cites = cm ? cm[1] : "";
