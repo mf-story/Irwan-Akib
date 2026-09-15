@@ -19,6 +19,7 @@ const DATA_DIR = process.env.DATA_DIR || SEED_DIR;
 const UPLOADS_DIR = process.env.UPLOADS_DIR || path.join(ROOT, "uploads");
 const CONTENT_FILE = path.join(DATA_DIR, "content.json");
 const ARTICLES_FILE = path.join(DATA_DIR, "articles.json");
+const COMMENTS_FILE = path.join(DATA_DIR, "comments.json");
 const CONFIG_FILE = path.join(DATA_DIR, "admin.config.json");
 
 // Inisialisasi penyimpanan (dibungkus try/catch agar aplikasi tidak crash bila
@@ -149,6 +150,33 @@ function readJsonFile(file, fallback) {
   } catch (e) {
     return fallback;
   }
+}
+
+// Alamat IP klien (mendukung di belakang proxy/Traefik).
+function clientIp(req) {
+  const xf = req.headers["x-forwarded-for"];
+  if (xf) return String(xf).split(",")[0].trim();
+  return (req.socket && req.socket.remoteAddress) || "unknown";
+}
+
+// Pembatas laju komentar sederhana (anti-spam): jeda 10 detik & maks 15/jam per IP.
+const commentRate = new Map();
+function canComment(ip) {
+  const now = Date.now();
+  let e = commentRate.get(ip);
+  if (!e || now - e.hourStart > 3600000) { e = { last: 0, count: 0, hourStart: now }; commentRate.set(ip, e); }
+  if (now - e.last < 10000) return { ok: false, error: "Tunggu sebentar sebelum mengirim komentar lagi." };
+  if (e.count >= 15) return { ok: false, error: "Terlalu banyak komentar dari perangkat ini. Coba lagi nanti." };
+  return { ok: true, mark: () => { e.last = now; e.count++; } };
+}
+
+// Bersihkan input komentar: buang tag HTML & karakter kontrol, batasi panjang.
+function cleanComment(s, max) {
+  return String(s || "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "")
+    .trim()
+    .slice(0, max);
 }
 
 function slugify(s) {
@@ -407,6 +435,61 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { ok: true });
     } catch (e) {
       return sendJson(res, 400, { ok: false, error: "Gagal menghapus: " + e.message });
+    }
+  }
+
+  // ---- API: komentar: daftar ----
+  if (url === "/api/comments" && req.method === "GET") {
+    const slug = query.get("slug") || "";
+    const all = readJsonFile(COMMENTS_FILE, {});
+    const list = Array.isArray(all[slug]) ? all[slug] : [];
+    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" });
+    return res.end(JSON.stringify(list));
+  }
+
+  // ---- API: komentar: kirim (publik) ----
+  if (url === "/api/comments" && req.method === "POST") {
+    try {
+      const body = JSON.parse((await readBody(req, 64 * 1024)) || "{}");
+      const slug = String(body.slug || "").trim();
+      if (!slug) return sendJson(res, 400, { ok: false, error: "Tulisan tidak valid" });
+      const arts = readJsonFile(ARTICLES_FILE, []);
+      const art = arts.find((a) => a && a.slug === slug && a.published !== false);
+      if (!art) return sendJson(res, 404, { ok: false, error: "Tulisan tidak ditemukan" });
+      const name = cleanComment(body.name, 60);
+      const message = cleanComment(body.message, 2000);
+      if (name.length < 2) return sendJson(res, 400, { ok: false, error: "Nama minimal 2 karakter" });
+      if (message.length < 2) return sendJson(res, 400, { ok: false, error: "Komentar terlalu pendek" });
+      const rl = canComment(clientIp(req));
+      if (!rl.ok) return sendJson(res, 429, { ok: false, error: rl.error });
+      const all = readJsonFile(COMMENTS_FILE, {});
+      if (!Array.isArray(all[slug])) all[slug] = [];
+      if (all[slug].length >= 1000) return sendJson(res, 400, { ok: false, error: "Komentar untuk tulisan ini sudah penuh" });
+      const c = { id: "c" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), name, message, date: new Date().toISOString() };
+      all[slug].push(c);
+      fs.writeFileSync(COMMENTS_FILE, JSON.stringify(all, null, 2));
+      rl.mark();
+      return sendJson(res, 200, { ok: true, comment: c });
+    } catch (e) {
+      return sendJson(res, 400, { ok: false, error: "Gagal mengirim komentar" });
+    }
+  }
+
+  // ---- API: komentar: hapus (admin) ----
+  if (url === "/api/comment/delete" && req.method === "POST") {
+    if (!validToken(req)) return sendJson(res, 401, { ok: false, error: "Tidak diizinkan" });
+    try {
+      const body = JSON.parse((await readBody(req)) || "{}");
+      const slug = String(body.slug || "");
+      const id = String(body.id || "");
+      const all = readJsonFile(COMMENTS_FILE, {});
+      if (Array.isArray(all[slug])) {
+        all[slug] = all[slug].filter((c) => c && c.id !== id);
+        fs.writeFileSync(COMMENTS_FILE, JSON.stringify(all, null, 2));
+      }
+      return sendJson(res, 200, { ok: true });
+    } catch (e) {
+      return sendJson(res, 400, { ok: false, error: "Gagal menghapus komentar" });
     }
   }
 

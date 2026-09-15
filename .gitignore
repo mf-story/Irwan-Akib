@@ -5,6 +5,9 @@ node_modules/
 admin.config.json
 data/admin.config.json
 
+# Komentar pengunjung (data lokal; di produksi tersimpan di volume)
+data/comments.json
+
 # Berkas sumber pribadi
 *.pdf
 *.docx

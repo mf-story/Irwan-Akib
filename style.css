@@ -1101,10 +1101,11 @@ body.lb-open { overflow: hidden; }
 /* Reader (article page) ----------------------------------------- */
 .reader { padding: calc(var(--nav-h) + 30px) 0 60px; }
 .reader-back {
-  display: inline-block;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto 20px;
   color: var(--accent);
   font-weight: 500;
-  margin-bottom: 20px;
 }
 .reader-head { max-width: 800px; margin: 0 auto; }
 .reader-cat {
@@ -1252,3 +1253,50 @@ body.lb-open { overflow: hidden; }
   .search-box { max-width: none; }
   .footer-inner { flex-direction: column; text-align: center; }
 }
+
+/* ===== Tombol bagikan artikel ===== */
+.share-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin: 40px 0 4px; padding-top: 24px; border-top: 1px solid var(--border);
+}
+.share-label { font-weight: 700; color: var(--heading); font-size: .95rem; }
+.share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.share-btn {
+  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--border); background: #fff; color: var(--heading);
+  cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.share-btn svg { width: 20px; height: 20px; }
+.share-btn:hover { transform: translateY(-2px); color: #fff; }
+.share-btn.wa:hover { background: #25d366; border-color: #25d366; }
+.share-btn.fb:hover { background: #1877f2; border-color: #1877f2; }
+.share-btn.xt:hover { background: #000; border-color: #000; }
+.share-btn.tg:hover { background: #229ed9; border-color: #229ed9; }
+.share-btn.copy:hover { background: var(--accent); border-color: var(--accent); }
+.share-btn.copy.copied { background: var(--ok); border-color: var(--ok); color: #fff; }
+
+/* ===== Komentar artikel ===== */
+.comments { max-width: 780px; margin: 48px auto 0; padding-top: 32px; border-top: 1px solid var(--border); }
+.comments-title { font-size: 1.4rem; color: var(--heading); margin-bottom: 20px; }
+.comments-title span { color: var(--accent); font-weight: 700; }
+.comment-form { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 30px; box-shadow: var(--shadow-sm); }
+.cf-input {
+  width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius);
+  font-family: inherit; font-size: .98rem; color: var(--heading); background: #fff; margin-bottom: 12px; resize: vertical;
+}
+.cf-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.cf-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.cf-status { color: var(--muted); font-size: .9rem; }
+.comment-list { display: flex; flex-direction: column; gap: 18px; }
+.comment-empty { color: var(--muted); font-style: italic; }
+.comment { display: flex; gap: 14px; }
+.comment-avatar {
+  width: 44px; height: 44px; flex: none; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent-dark);
+  display: grid; place-items: center; font-weight: 700; font-size: .9rem;
+}
+.comment-body { flex: 1; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+.comment-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.comment-head b { color: var(--heading); }
+.comment-head span { color: var(--muted); font-size: .82rem; }
+.comment-body p { color: var(--text); line-height: 1.6; margin: 0; }
