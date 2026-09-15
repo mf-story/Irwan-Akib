@@ -563,9 +563,21 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
-  // ---- Halaman artikel: sisipkan Open Graph (thumbnail saat dibagikan) ----
+  // ---- Favicon: pakai foto profil ----
+  if (req.method === "GET" && (url === "/favicon" || url === "/favicon.ico")) {
+    return serveFavicon(req, res);
+  }
+
+  // ---- Beranda & daftar tulisan: Open Graph (preview menarik saat dibagikan) ----
+  if (req.method === "GET" && (url === "/" || url === "/index.html")) {
+    return serveHtmlWithOg(req, res, "index.html", "home");
+  }
+  if (req.method === "GET" && url === "/tulisan.html") {
+    return serveHtmlWithOg(req, res, "tulisan.html", "tulisan");
+  }
+  // ---- Halaman artikel: Open Graph dari data artikel (thumbnail gambar) ----
   if (req.method === "GET" && url === "/artikel.html" && query.get("slug")) {
-    return serveArticleHtml(req, res, query.get("slug"));
+    return serveHtmlWithOg(req, res, "artikel.html", "article", query.get("slug"));
   }
 
   // ---- File statis ----
@@ -575,50 +587,111 @@ const server = http.createServer(async (req, res) => {
   res.end("Method Not Allowed");
 });
 
-// Sajikan artikel.html dengan meta Open Graph/Twitter yang terisi dari data artikel,
-// sehingga WhatsApp/Facebook/X menampilkan judul, ringkasan, dan gambar sampul.
-function serveArticleHtml(req, res, slug) {
+// ---- Helpers Open Graph ----
+function ogBaseUrl(req) {
+  const fwdProto = String(req.headers["x-forwarded-proto"] || "").split(",")[0].trim();
+  const proto = fwdProto || (req.socket && req.socket.encrypted ? "https" : "http");
+  const host = req.headers["x-forwarded-host"] || req.headers.host || "";
+  return proto + "://" + host;
+}
+function ogAbs(base, p) {
+  if (!p) return "";
+  return /^https?:\/\//i.test(p) ? p : base + "/" + String(p).replace(/^\/+/, "");
+}
+function ogEsc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// Sajikan HTML dengan meta Open Graph/Twitter terisi agar preview menarik saat dibagikan.
+function serveHtmlWithOg(req, res, file, kind, slug) {
   try {
-    const arts = readJsonFile(ARTICLES_FILE, []);
-    const a = arts.find((x) => x && x.slug === slug && x.published !== false);
-    let html = fs.readFileSync(path.join(ROOT, "artikel.html"), "utf8");
-    if (a) {
-      const fwdProto = String(req.headers["x-forwarded-proto"] || "").split(",")[0].trim();
-      const proto = fwdProto || (req.socket && req.socket.encrypted ? "https" : "http");
-      const host = req.headers["x-forwarded-host"] || req.headers.host || "";
-      const base = proto + "://" + host;
-      const content = readJsonFile(CONTENT_FILE, {});
-      const siteName = (content.brand && content.brand.name) || "Profil Dosen";
-      const fallbackImg = (content.hero && content.hero.avatarImage) || "";
-      const rawImg = a.cover || fallbackImg;
-      const imgUrl = rawImg
-        ? (/^https?:\/\//i.test(rawImg) ? rawImg : base + "/" + String(rawImg).replace(/^\/+/, ""))
-        : "";
-      const title = a.title || siteName;
-      const desc = (a.excerpt || String(a.bodyHtml || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()).slice(0, 200);
-      const pageUrl = base + "/artikel.html?slug=" + encodeURIComponent(slug);
-      const E = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-      const meta = [
-        `<meta property="og:type" content="article" />`,
-        `<meta property="og:site_name" content="${E(siteName)}" />`,
-        `<meta property="og:title" content="${E(title)}" />`,
-        `<meta property="og:description" content="${E(desc)}" />`,
-        imgUrl ? `<meta property="og:image" content="${E(imgUrl)}" />` : "",
-        imgUrl ? `<meta property="og:image:alt" content="${E(title)}" />` : "",
-        `<meta property="og:url" content="${E(pageUrl)}" />`,
-        `<meta name="twitter:card" content="${imgUrl ? "summary_large_image" : "summary"}" />`,
-        `<meta name="twitter:title" content="${E(title)}" />`,
-        `<meta name="twitter:description" content="${E(desc)}" />`,
-        imgUrl ? `<meta name="twitter:image" content="${E(imgUrl)}" />` : "",
-      ].filter(Boolean).join("\n  ");
-      html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${E(title)} — ${E(siteName)}</title>`);
-      html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${E(desc)}" />`);
-      html = html.replace("</head>", "  " + meta + "\n</head>");
+    let html = fs.readFileSync(path.join(ROOT, file), "utf8");
+    const content = readJsonFile(CONTENT_FILE, {});
+    const base = ogBaseUrl(req);
+    const brand = content.brand || {};
+    const metaC = content.meta || {};
+    const hero = content.hero || {};
+    const siteName = brand.name || "Profil";
+    const profileImg = ogAbs(base, hero.avatarImage);
+
+    let title, desc, image, url, type;
+    if (kind === "article") {
+      const arts = readJsonFile(ARTICLES_FILE, []);
+      const a = arts.find((x) => x && x.slug === slug && x.published !== false);
+      if (!a) {
+        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" });
+        return res.end(html);
+      }
+      title = a.title || siteName;
+      desc = (a.excerpt || String(a.bodyHtml || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()).slice(0, 200);
+      image = ogAbs(base, a.cover) || profileImg;
+      url = base + "/artikel.html?slug=" + encodeURIComponent(slug);
+      type = "article";
+      html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${ogEsc(title)} — ${ogEsc(siteName)}</title>`);
+    } else if (kind === "tulisan") {
+      title = "Ruang Tulisan — " + siteName;
+      desc = metaC.description || "Kumpulan tulisan, gagasan, dan pandangan.";
+      image = profileImg;
+      url = base + "/tulisan.html";
+      type = "website";
+    } else {
+      title = metaC.title || (siteName + (brand.credential ? ", " + brand.credential : ""));
+      desc = metaC.description || "";
+      image = profileImg;
+      url = base + "/";
+      type = "website";
     }
+
+    const tags = [
+      `<meta property="og:type" content="${ogEsc(type)}" />`,
+      `<meta property="og:site_name" content="${ogEsc(siteName)}" />`,
+      `<meta property="og:title" content="${ogEsc(title)}" />`,
+      `<meta property="og:description" content="${ogEsc(desc)}" />`,
+      image ? `<meta property="og:image" content="${ogEsc(image)}" />` : "",
+      image ? `<meta property="og:image:alt" content="${ogEsc(title)}" />` : "",
+      `<meta property="og:url" content="${ogEsc(url)}" />`,
+      `<meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}" />`,
+      `<meta name="twitter:title" content="${ogEsc(title)}" />`,
+      `<meta name="twitter:description" content="${ogEsc(desc)}" />`,
+      image ? `<meta name="twitter:image" content="${ogEsc(image)}" />` : "",
+    ].filter(Boolean).join("\n  ");
+    html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${ogEsc(desc)}" />`);
+    html = html.replace("</head>", "  " + tags + "\n</head>");
+
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" });
     return res.end(html);
   } catch (e) {
     return serveStatic(req, res);
+  }
+}
+
+// Favicon (ikon browser) dari foto profil. Utamakan versi kecil bila ada.
+function serveFavicon(req, res) {
+  try {
+    let filePath = null;
+    const small = path.join(UPLOADS_DIR, "site-favicon.jpg");
+    if (fs.existsSync(small) && fs.statSync(small).isFile()) filePath = small;
+    if (!filePath) {
+      const content = readJsonFile(CONTENT_FILE, {});
+      const avatar = (content.hero && content.hero.avatarImage) || "";
+      if (avatar && !/^https?:\/\//i.test(avatar)) {
+        const rel = String(avatar).replace(/^\/+/, "");
+        const p = /^uploads[/\\]/i.test(rel)
+          ? path.join(UPLOADS_DIR, rel.replace(/^uploads[/\\]?/i, ""))
+          : path.join(ROOT, rel);
+        if ((p.startsWith(UPLOADS_DIR) || p.startsWith(ROOT)) && fs.existsSync(p) && fs.statSync(p).isFile()) filePath = p;
+      }
+    }
+    if (filePath) {
+      const ext = path.extname(filePath).toLowerCase();
+      res.writeHead(200, { "Content-Type": MIME[ext] || "image/jpeg", "Cache-Control": "max-age=86400" });
+      return fs.createReadStream(filePath).pipe(res);
+    }
+    res.writeHead(404);
+    res.end("Not found");
+  } catch (e) {
+    res.writeHead(404);
+    res.end("Not found");
   }
 }
 
