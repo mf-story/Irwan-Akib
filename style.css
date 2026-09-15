@@ -564,7 +564,7 @@ img { max-width: 100%; display: block; }
 /* Education grid ------------------------------------------------- */
 .edu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   max-width: 1080px;
   margin: 0 auto;
