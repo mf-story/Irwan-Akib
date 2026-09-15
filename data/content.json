@@ -13,16 +13,18 @@
     "nameHtml": "Prof. Dr. H. Irwan Akib<span class=\"amp\">,</span> <span class=\"post-nominal\">M.Pd.</span>",
     "roles": [
       "Guru Besar Ilmu Pendidikan Matematika",
-      "Rektor Unismuh Makassar (2005–2016)",
+      "Rektor Unismuh Makassar (2004–2016)",
       "Ketua Pimpinan Pusat Muhammadiyah 2022–2027",
       "Direktur Pascasarjana Unismuh (2022–2025)",
       "Pendidik dan Kader Muhammadiyah"
     ],
-    "desc": "Guru Besar Ilmu Pendidikan Matematika Universitas Muhammadiyah Makassar yang menekuni kajian <em>etnomatematika berbasis budaya Bugis–Makassar</em>. Menahkodai Unismuh Makassar sebagai Rektor selama dua periode (2005–2012), kader Muhammadiyah sejak 1988, dan kini dipercaya sebagai Ketua Pimpinan Pusat Muhammadiyah 2022–2027 sebagai representasi Indonesia Timur.",
+    "desc": "Guru Besar Ilmu Pendidikan Matematika Universitas Muhammadiyah Makassar yang menekuni kajian <em>etnomatematika berbasis budaya Bugis–Makassar</em>. Menahkodai Unismuh Makassar sebagai Rektor selama tiga periode (2004–2016), kader Muhammadiyah sejak 1988, dan kini dipercaya sebagai Ketua Pimpinan Pusat Muhammadiyah 2022–2027 sebagai representasi Indonesia Timur.",
     "btnPrimary": "Tentang Saya",
     "btnPrimaryHref": "tulisan.html",
     "btnGhost": "Karya Ilmiah",
     "btnGhostHref": "#works",
+    "btnTertiary": "Tulisan Saya",
+    "btnTertiaryHref": "tulisan.html",
     "avatarImage": "uploads/img-1788022163500-87fcb9.jpg",
     "backgroundImage": "uploads/img-1788022166212-8623ae.jpg",
     "backgroundOpacity": 15,
@@ -45,7 +47,7 @@
     "tag": "01 — Tentang",
     "headingHtml": "Fokus &amp; <em>Keahlian</em>",
     "paragraphs": [
-      "<strong>Prof. Dr. H. Irwan Akib, M.Pd.</strong> lahir di Pare-pare, 2 Agustus 1963. Putra dari pasangan Muhammad Akib Tahang dan Hamijah ini menyelesaikan pendidikan menengah di SMA Negeri 159 Ujung Pandang, sebelum melanjutkan sarjana pada Fakultas Pendidikan Matematika IKIP Ujung Pandang.",
+      "<strong>Prof. Dr. H. Irwan Akib, M.Pd.</strong> lahir di Pare-pare, 2 Agustus 1963. Putra dari pasangan Muhammad Akib Tahang dan Hamijah ini menyelesaikan pendidikan menengah di SMA Negeri 159 Sungguminasa, sebelum melanjutkan sarjana pada Fakultas Pendidikan Matematika IKIP Ujung Pandang.",
       "Perjalanan akademiknya diwarnai kerja keras: semasa remaja ia membantu neneknya berjualan pakaian dorong ke pasar, dan selama kuliah S1 ia menjadi asisten dosen sekaligus guru di SMA Muhammadiyah dan SMA PGRI Sungguminasa untuk membiayai pendidikannya sendiri. Sejak 1988 tercatat sebagai kader Muhammadiyah (NBM 613949).",
       "Ia menempuh magister di IKIP Surabaya (1997) dan doktor di UNESA Surabaya (2008) dengan disertasi <em>“Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar.”</em> Dikukuhkan sebagai <strong>Guru Besar Ilmu Pendidikan Matematika</strong> pada 2016 dengan orasi ilmiah <em>“Matematika dan Nilai-Nilai Kearifan Lokal.”</em> Bersama istri Dra. Najmah Maruf, beliau menetap di Makassar."
     ],
@@ -64,7 +66,7 @@
       {
         "icon": "🏛️",
         "title": "Kepemimpinan",
-        "text": "Dua periode Rektor Unismuh Makassar; berbagai amanah struktural Muhammadiyah."
+        "text": "Tiga periode Rektor Unismuh Makassar; berbagai amanah struktural Muhammadiyah."
       },
       {
         "icon": "🔬",
@@ -95,22 +97,22 @@
         "desc": "Dilantik pada 30 Juni 2022 oleh Pelaksana Harian Rektor Unismuh."
       },
       {
-        "date": "2015 — 2020",
-        "role": "Wakil Ketua Majelis Diktilitbang PP Muhammadiyah",
-        "org": "PP Muhammadiyah",
-        "desc": "Bersamaan dengan Sekretaris PWM Sulawesi Selatan periode 2015–2020."
+        "date": "2015 — 2022",
+        "role": "Sekretaris PW Muhammadiyah Sulawesi Selatan",
+        "org": "Pimpinan Wilayah Muhammadiyah Sulawesi Selatan",
+        "desc": "Menjabat Sekretaris PWM Sulawesi Selatan periode 2015–2022."
       },
       {
-        "date": "2005 — 2016",
-        "role": "Rektor",
+        "date": "2004 — 2016",
+        "role": "Rektor (Tiga Periode)",
         "org": "Universitas Muhammadiyah Makassar",
-        "desc": "Membawa jumlah mahasiswa dari sekitar 10.000 menjadi 33.366 mahasiswa."
+        "desc": "Rektor tiga periode: 2004–2008, 2008–2012, dan 2012–2016. Membawa jumlah mahasiswa dari sekitar 10.000 menjadi 33.366 mahasiswa."
       },
       {
-        "date": "1997",
-        "role": "Wakil Ketua PW Pemuda Muhammadiyah",
+        "date": "1998 — 2002",
+        "role": "Ketua Umum PW Pemuda Muhammadiyah",
         "org": "Pimpinan Wilayah Pemuda Muhammadiyah Sulawesi Selatan",
-        "desc": "<br>"
+        "desc": "Sebelumnya Wakil Ketua PW Pemuda Muhammadiyah Sulsel (1994–1998)."
       },
       {
         "date": "1992 — Sekarang",
@@ -148,15 +150,29 @@
         "icon": "🎓",
         "date": "S1 (Sarjana)",
         "degree": "Sarjana Pendidikan Matematika",
-        "org": "FPMIPA IKIP Ujung Pandang",
+        "org": "FPMIPA IKIP Ujung Pandang · 1986",
         "desc": "Aktif di IMM Koordinator Komisariat IKIP Ujung Pandang dan BEM; asisten dosen sekaligus guru di SMA Muhammadiyah/PGRI Sungguminasa."
       },
       {
         "icon": "📗",
         "date": "Menengah",
-        "degree": "SMA Negeri 159 Ujung Pandang",
-        "org": "Ujung Pandang (kini Makassar)",
+        "degree": "SMA Negeri 159 Sungguminasa",
+        "org": "Sungguminasa, Gowa · 1982",
         "desc": "Diselesaikan sambil bekerja membantu neneknya berjualan pakaian di pasar."
+      },
+      {
+        "icon": "📘",
+        "date": "Pertama",
+        "degree": "SMP Negeri 2 Pare-Pare",
+        "org": "Pare-Pare, Sulawesi Selatan · 1979",
+        "desc": "Pendidikan menengah pertama di kota kelahiran."
+      },
+      {
+        "icon": "📙",
+        "date": "Dasar",
+        "degree": "SD Negeri 7 Pare-Pare",
+        "org": "Pare-Pare, Sulawesi Selatan · 1975",
+        "desc": "Pendidikan dasar di kota kelahiran, Pare-Pare."
       }
     ],
     "focusTitle": "Fokus Keilmuan",
@@ -229,53 +245,125 @@
     "kiprahColumns": [
       {
         "icon": "🏛️",
-        "title": "Amanah Struktural",
+        "title": "Manajemen Perguruan Tinggi",
+        "items": [
+          {
+            "title": "Rektor Universitas Muhammadiyah Makassar",
+            "meta": "2004–2008, 2008–2012, dan 2012–2016"
+          },
+          {
+            "title": "Dekan FKIP Unismuh Makassar",
+            "meta": "2004 (sembilan bulan)"
+          },
+          {
+            "title": "Pembantu Rektor I Unismuh Makassar",
+            "meta": "2004 (dua bulan)"
+          },
+          {
+            "title": "Pembantu Dekan I FKIP Unismuh Makassar",
+            "meta": "1999–2001"
+          },
+          {
+            "title": "Ketua Prodi Pendidikan Matematika FKIP Unismuh Makassar",
+            "meta": "1997–1999"
+          },
+          {
+            "title": "Pembantu Dekan I FKIP Unismuh Makassar",
+            "meta": "1993–1994"
+          },
+          {
+            "title": "Ketua Prodi Pendidikan Matematika FKIP Unismuh Makassar",
+            "meta": "1992–1993"
+          },
+          {
+            "title": "Perintis dan Kepala SMP Lab School Unismuh Makassar",
+            "meta": "—"
+          }
+        ]
+      },
+      {
+        "icon": "🤝",
+        "title": "Riwayat Organisasi",
         "items": [
           {
             "title": "Ketua Pimpinan Pusat Muhammadiyah",
             "meta": "2022–2027"
           },
           {
-            "title": "Direktur Pascasarjana Unismuh Makassar",
-            "meta": "2022–2025"
-          },
-          {
-            "title": "Wakil Ketua Majelis Diktilitbang PP Muhammadiyah",
-            "meta": "2015–2020"
-          },
-          {
             "title": "Sekretaris PW Muhammadiyah Sulawesi Selatan",
-            "meta": "2015–2020"
+            "meta": "2015–2022"
           },
           {
-            "title": "Rektor Universitas Muhammadiyah Makassar",
-            "meta": "2005–2008 dan 2008–2012"
+            "title": "Wakil Ketua ALPTKSI",
+            "meta": "2014–2018"
+          },
+          {
+            "title": "Anggota Dewan Pakar ICMI Orwil Sulsel",
+            "meta": "2012–2016"
+          },
+          {
+            "title": "Ketua Litbang PWM Sulawesi Selatan",
+            "meta": "2010–2015"
+          },
+          {
+            "title": "Divisi Diklat APTISI Pusat",
+            "meta": "2011–2015"
+          },
+          {
+            "title": "Wakil Ketua APTISI Wilayah IX-A Sulawesi",
+            "meta": "2011–2015"
+          },
+          {
+            "title": "Wakil Sekjen ALPTKS Indonesia",
+            "meta": "2010–2014"
+          },
+          {
+            "title": "Wakil Ketua Majelis Dikdasmen PWM Sulsel",
+            "meta": "2005–2010"
+          },
+          {
+            "title": "Wakil Ketua Himpunan Matematikawan Indonesia Sulsel",
+            "meta": "2007–2009"
+          },
+          {
+            "title": "Wakil Sekretaris Himpunan Matematikawan Indonesia Sulsel",
+            "meta": "2005–2007"
+          },
+          {
+            "title": "Anggota Majelis Dikdasmen PWM Sulsel",
+            "meta": "2000–2005"
+          },
+          {
+            "title": "Ketua Umum PW Pemuda Muhammadiyah Sulsel",
+            "meta": "1998–2002"
+          },
+          {
+            "title": "Sekretaris Badan Pendidikan Kader PWM Sulsel",
+            "meta": "1990–2000"
           },
           {
             "title": "Wakil Ketua PW Pemuda Muhammadiyah Sulsel",
-            "meta": "1997"
+            "meta": "1994–1998"
+          },
+          {
+            "title": "Sekretaris PW Pemuda Muhammadiyah Sulsel",
+            "meta": "1990–1994"
           },
           {
             "title": "Sekretaris Umum DPD IMM Sulawesi Selatan",
-            "meta": "1991"
-          }
-        ]
-      },
-      {
-        "icon": "",
-        "title": "Kiprah dan Kaderisasi",
-        "items": [
-          {
-            "title": "Pembinaan Perguruan Tinggi Muhammadiyah",
-            "meta": "Nasional"
+            "meta": "1989–1991"
           },
           {
-            "title": "Pengembangan Kader IMM dan Pemuda Muhammadiyah",
-            "meta": "Sulawesi Selatan"
+            "title": "Bendahara DPD IMM Sulselra",
+            "meta": "1987–1989"
           },
           {
-            "title": "Pengajar dan Pembimbing S1/S2/S3 Pendidikan Matematika",
-            "meta": "Unismuh Makassar"
+            "title": "Ketua Umum IMM Komisariat FPMIPA IKIP Ujung Pandang",
+            "meta": "1984"
+          },
+          {
+            "title": "Sekretaris Umum BPM FPMIPA IKIP Ujung Pandang",
+            "meta": "1984"
           }
         ]
       }
@@ -287,16 +375,16 @@
         "title": "Fokus Penelitian",
         "items": [
           {
-            "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar",
-            "meta": "Disertasi Doktor, UNESA · 2008"
+            "title": "Pengembangan Model Pembelajaran Matematika",
+            "meta": "Berkelanjutan"
           },
           {
             "title": "Etnomatematika dan Nilai-Nilai Kearifan Lokal",
             "meta": "Orasi Pengukuhan Guru Besar · 2016"
           },
           {
-            "title": "Pengembangan Model Pembelajaran Matematika",
-            "meta": "Berkelanjutan"
+            "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar",
+            "meta": "Disertasi Doktor, UNESA · 2008"
           }
         ]
       },
@@ -317,204 +405,12 @@
     ],
     "publications": [
       {
-        "title": "Mathematical connection ability in solving mathematics problem based on initial abilities of students at SMPN 10 Bulukumba",
-        "meta": "Jurnal Daya Matematis 4 (2), 207-217, 2016 · 79 sitasi"
-      },
-      {
-        "title": "Fenomena plagiarisme mahasiswa",
-        "meta": "Jurnal Equilibrium Pendidikan Sosiologi 4 (1), 20-29, 2016 · 42 sitasi"
-      },
-      {
-        "title": "Bantuan langsung tunai",
-        "meta": "Jurnal Equilibrium, 2016 · 40 sitasi"
-      },
-      {
-        "title": "IMPLEMENTASI TEORI BELAJAR ROBERT GAGNE DALAM PEMBELAJARAN KONSEP MATEMATIKA",
-        "meta": "2015 · 27 sitasi"
-      },
-      {
-        "title": "The description of relationship between mathematics charasteristic and Bugis culture values",
-        "meta": "Global journal of pure and applied mathematics 12 (4), 2765-2776, 2016 · 23 sitasi"
-      },
-      {
-        "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar",
-        "meta": "Disertasi. Tidak diterbitkan. Surabaya: Program Pascasarjana Universitas …, 2008 · 19 sitasi"
-      },
-      {
-        "title": "Description Of Mathematical Communication Skills, Logical Thinking And Its Influence On The Ability Of Mathematical Literacy For Students Of Grade V Elementary School",
-        "meta": "2020 · 18 sitasi"
-      },
-      {
-        "title": "The Local Cultural Values In The Interaction Of Matematics Learning At School",
-        "meta": "2016 · 17 sitasi"
-      },
-      {
-        "title": "Learning social arithmetic of low-ability student through the context of snacks and money",
-        "meta": "Indonesian Journal on Learning and Advanced Education (IJOLAE), 21-33, 2022 · 15 sitasi"
-      },
-      {
-        "title": "The application of cooperative learning model of team assisted individualization (tai) based manipulative media on topics “shape” of class vi elementary school of tombolok gowa",
-        "meta": "Daya Matematis: Jurnal Inovasi Pendidikan Matematika 7 (3), 317-327, 2020 · 15 sitasi"
-      },
-      {
-        "title": "Peran kompetensi guru penggerak dalam meningkatkan motivasi belajar siswa sekolah dasar",
-        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 1544-1554, 2023 · 13 sitasi"
-      },
-      {
-        "title": "Analisis kemampuan pemecahan masalah matematis siswa dalam menyelesaikan soal cerita",
-        "meta": "Infinity: Jurnal Matematika dan Aplikasinya 2 (1), 33-39, 2021 · 12 sitasi"
-      },
-      {
-        "title": "STUDENT’S ERROR ANALYSIS IN FINISHING MATHEMATIC WORD PROBLEM BASED NEWMAN’S PROCEDUR VIEWED FROM MULTIPLE INTELLIGENCES",
-        "meta": "2018 · 11 sitasi"
-      },
-      {
-        "title": "Nilai-nilai moral dan kepedulian pada pendidikan karakter di SD Islam Al Azhar 34 Makassar",
-        "meta": "Pendas: Jurnal Ilmiah Pendidikan Dasar 8 (2), 5957-5976, 2023 · 9 sitasi"
-      },
-      {
-        "title": "Identifying The Influence Of Anxiety And Self-Reliance In Learning Towards Mathematics Learning Performance Of Elementary School’s Students Grade V",
-        "meta": "2020 · 9 sitasi"
-      },
-      {
-        "title": "Risfaisal., 2016., Bantuan Langsung Tunai",
-        "meta": "Jurnal Equilibrium. FKIP Unismuh Makassar 2 (2) · 7 sitasi"
+        "title": "MENUMBUHKAN KESADARAN AKAN KEBERSIHAN UNTUK HIDUP BERKELANJUTAN DI SD NEGERI BIRINGKALORO KABUPATEN GOWA",
+        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 12 (01), 71-79, 2026"
       },
       {
         "title": "NuminaMath 7B: Revolutionizing Math Solving with Integrated Reasoning Advanced Generative AI Tools and Python REPL",
         "meta": "Jurnal Penelitian Sains Teknologi, 1-19, 2026 · 6 sitasi"
-      },
-      {
-        "title": "Developing a Virtual Reality Simulation of the Michelson-Morley Experiment for Physics Education: Design, Validation, and Educational",
-        "meta": "International Journal of Learning, Teaching and Educational Research 23 (11 …, 2024 · 6 sitasi"
-      },
-      {
-        "title": "Proses generalisasi pola bilangan siswa SMP dalam memecahkan masalah matematika berdasarkan gaya belajar",
-        "meta": "Jurnal Axioma: Jurnal Matematika dan Pembelajaran 7 (2), 139–148-139–148, 2022 · 6 sitasi"
-      },
-      {
-        "title": "The use of educational game media and its effect on student achievement of 6th grade elementary school students in mathematics learning",
-        "meta": "Mathematics, Informatics, Science, and Education International Conference …, 2019 · 6 sitasi"
-      },
-      {
-        "title": "Analisis Kesalahan Siswa dalam Menyelesaikan Soal Cerita Matematika berdasarkan Prosedur Newman ditinjau dari Kecenderungan Kecerdasan Majemuk",
-        "meta": "UNIVERSITAS NEGERI MAKASSAR, 2018 · 6 sitasi"
-      },
-      {
-        "title": "The Need for Development of Meaningful E-Module Teaching Materials to Optimize Mathematics Learning with a Focus on Critical Thinking Skills",
-        "meta": "PPSDP International Journal of Education 3 (2), 102-110, 2024 · 5 sitasi"
-      },
-      {
-        "title": "Identifikasi kesulitan berbicara siswa di SD Inpres Pakkolompo",
-        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 1726-1741, 2023 · 5 sitasi"
-      },
-      {
-        "title": "Perbandingan Motivasi dan Hasil Belajar Matematika yang Diajar Menggunakan Blended Learning Berbasis Literasi Digital dengan Konvensional pada Siswa Kelas IV SDN Mangkura 1 …",
-        "meta": "Proximal: Jurnal Penelitian Matematika Dan Pendidikan Matematika 6 (1), 1-7, 2023 · 5 sitasi"
-      },
-      {
-        "title": "Analisis kemampuan pemecahan masalah matematis siswa dalam menyelesaikan soal cerita. Infinity: Jurnal Matematika dan Aplikasinya, 2 (1), 33–39",
-        "meta": "2021 · 5 sitasi"
-      },
-      {
-        "title": "Efektivitas Pembelajaran Matematika melalui Penggunaan Media Education Game Maju Mundur Cantik (Cari dan Tebak Instruksi) pada Siswa Kelas VII SMP Unismuh Makassar",
-        "meta": "Jurnal SIGMA (Suara Intelektual Gaya Matematika) Volume 11, 2019 · 5 sitasi"
-      },
-      {
-        "title": "J urnal E quilibrium J urnal E quilibrium. Fenomena Sosial Pilihan Hidup Tidak Menikah Wanita Karier, III (1), 1–10",
-        "meta": "2016 · 5 sitasi"
-      },
-      {
-        "title": "The students’ representative processes in solving mathematical word problems",
-        "meta": "Knowledge 3 (1), 70-79, 2023 · 4 sitasi"
-      },
-      {
-        "title": "Thinking Processes of Mentally retarded: Students Disabled at Junior High School in Solving Fractions Problems",
-        "meta": "AL-ISHLAH: Jurnal Pendidikan 14 (2), 2185-2196, 2022 · 4 sitasi"
-      },
-      {
-        "title": "Muhammadiyah and the Early Statehood Politics of Indonesia",
-        "meta": "Journal of Al-Islam and Muhammadiyah Studies 1 (1), 1-11, 2020 · 4 sitasi"
-      },
-      {
-        "title": "Analisis Kemampuan Berpikir Reflektif Dalam Menyelesaikan Soal Cerita Matematika Ditinjau Dari Gaya Belajar Pada Siswa SMA",
-        "meta": "Wacana Akademika: Majalah Ilmiah Kependidikan 7 (2), 212-224, 2023 · 3 sitasi"
-      },
-      {
-        "title": "Penerapan pembelajaran berdiferensiasi dalam mengatasi kesulitan belajar bahasa Indonesia peserta didik kelas IV sekolah dasar",
-        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 316-328, 2023 · 3 sitasi"
-      },
-      {
-        "title": "Pengaruh Pendidikan Matematika Realistis (PMR) terhadap kemampuan pemahaman konsep dan kemampuan komunikasi matematis siswa sekolah dasar di wilayah IV Kecamatan Somba Opu …",
-        "meta": "Pendas: Jurnal Ilmiah Pendidikan Dasar 8 (1), 3700-3712, 2023 · 3 sitasi"
-      },
-      {
-        "title": "Media E-Learning Bangun Ruang Sisi Datar: Kelayakan pada Pembelajaran Daring",
-        "meta": "Edu Komputika Journal 9 (2), 78-87, 2023 · 3 sitasi"
-      },
-      {
-        "title": "Pengaruh penerapan model pembelajaran kooperatif tipe scramble terhadap kemampuan komunikasi matematis siswa",
-        "meta": "Delta-Pi: Jurnal Matematika dan Pendidikan Matematika 11 (1), 20-29, 2022 · 3 sitasi"
-      },
-      {
-        "title": "Describing mathematical communication ability, logical thinking and student learning outcome of class v elementary school in Sombaopu Makassar",
-        "meta": "International Conference on Elementary Education 2 (1), 1435-1445, 2020 · 3 sitasi"
-      },
-      {
-        "title": "Understanding hearing impairment students at SMPLB in rectangle based gender",
-        "meta": "Journal of Physics: Conference Series 1188 (1), 012077, 2019 · 3 sitasi"
-      },
-      {
-        "title": "Analisis Kesalahan Menyelesaikan Soal-Soal Pecahan BerdasarkanTaksonomi Bloom dan Kemampuan Awal Siswa Kelas V SD Negeri Rappocini",
-        "meta": "Matematika Dan Pembelajaran 6 (2), 172-183, 2018 · 3 sitasi"
-      },
-      {
-        "title": "Implementasi Budaya Bugis Makassar dalam Pembelajaran Matematika",
-        "meta": "Lembaga Penerbitan dan Perpustakaan Universitas Muhammadiyah Makassar, 2009 · 3 sitasi"
-      },
-      {
-        "title": "Analisis Kesulitan Mahasiswa dalam Memahami Konsep-Konsep dalam Struktur Aljabar",
-        "meta": "Jurnal Pendidikan Matematika dan Matematika, 2001 · 3 sitasi"
-      },
-      {
-        "title": "Analisis Kesulitan Mahasiswa Matematika Dalam Memahami Konsep-konsep Dalam Sruktur Aljabar. Eksponen Vol. 3. No. 2 Hal 143",
-        "meta": "Makassar: Jurusan Matematika FMIPA UM, 2001 · 3 sitasi"
-      },
-      {
-        "title": "CPjBL versus PjBL instruction: the practice of reviewing literature from reputable journals",
-        "meta": "Studies in Learning and Teaching 5 (3), 581-594, 2024 · 2 sitasi"
-      },
-      {
-        "title": "Pelatihan Mengajar Berbasis Problem Based Learning Berbasis Daring Pada Mahasiswa Pendidikan Guru Sekolah Dasar",
-        "meta": "2023 · 2 sitasi"
-      },
-      {
-        "title": "Trigonometric Learning Design with the ",
-        "meta": "Journal of Physics: Conference Series 1899 (1), 012128, 2021 · 2 sitasi"
-      },
-      {
-        "title": "Desain Pembelajaran Trigonometri Terintegrasi Alquran dengan Konsep Sibaliparriq sebagai Model Pembelajaran",
-        "meta": "Yayasan Ahmar Cendekia Indonesia, 2019 · 2 sitasi"
-      },
-      {
-        "title": "DESCRIPTIONS OF PEUDO THINKING IN UNDERSTANDING STUDENT CONCEPTS BASED ON THE COGNITIVE STYLE OF THE VISUALIZER AND VERBALIZER",
-        "meta": "2018 · 2 sitasi"
-      },
-      {
-        "title": "Analisis Kemampuan Pemecahan Masalah Matematika Ditinjau dari Pemahaman Konsep dan Kemampuan Penalaran Matematis Siswa Kelas VIII SMPN 29 Makassar",
-        "meta": "Pascasarjana, 2017 · 2 sitasi"
-      },
-      {
-        "title": "Adopsi konsep budaya Bugis Makassar dalam pembelajaran Matematika",
-        "meta": "Makalah Prosiding.[Online]. Tersedia: http://prosiding. unesa. ac. id …, 2014 · 2 sitasi"
-      },
-      {
-        "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar.[Disertasi]",
-        "meta": "Program Pascasarjana Universitas Negeri Surabaya, 2008 · 2 sitasi"
-      },
-      {
-        "title": "Pembelajaran Matematika dalam Perspektif Budaya Lokal",
-        "meta": "Makalah. Makasar: UNM, 2001 · 2 sitasi"
       },
       {
         "title": "Interactivity and accessibility in TPACK-integrated e-learning to enhance the quality of calculus learning",
@@ -523,46 +419,6 @@
       {
         "title": "Critical thinking skills in solving mathematical problems based on thinking and feeling personality types of grade 8 students",
         "meta": "International Journal of Learning Reformation in Elementary Education 5 (01 …, 2026 · 1 sitasi"
-      },
-      {
-        "title": "Critical Thinking Skills of Slow Learners in Mathematical Problem-Solving: A Systematic Literature Review",
-        "meta": "Journal of Mathematics Instruction, Social Research and Opinion 4 (2), 319-332, 2025 · 1 sitasi"
-      },
-      {
-        "title": "LOGIKA FALLACY PENYELESAIAN SOAL CERITA PADA SISWA SEKOLAH DASAR",
-        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 600-612, 2023 · 1 sitasi"
-      },
-      {
-        "title": "Implementasi Pendekatan STEM (Science, Technology, Engineering and Mathematics) Berbantuan Media Pembelajaran Interaktif Vlog di Sekolah Dasar",
-        "meta": "JIIP-Jurnal Ilmiah Ilmu Pendidikan 6 (4), 2648-2654, 2023 · 1 sitasi"
-      },
-      {
-        "title": "Application of Cooperative Learning Model of Type Jigsaw and Two Stay-Two Stray Towards Mathematics Learning Outcomes of Self-Confidence of Students",
-        "meta": "International Conference on Educational Studies in Mathematics (ICoESM 2021 …, 2021 · 1 sitasi"
-      },
-      {
-        "title": "Karakteristik Pemecahan Masalah Open Ended Ditinjau dari Gaya Kognitif Siswa",
-        "meta": "Universitas Negeri Makassar, 2018 · 1 sitasi"
-      },
-      {
-        "title": "Profil Kemampuan Komunikasi Matematika pada Materi Grup Ditinjau dari Nilai IPK Mahasiswa Calon Guru Matematika Angkatan 2014 FKIP UNTAD",
-        "meta": "UNIVERSITAS NEGERI MAKASSAR, 2017 · 1 sitasi"
-      },
-      {
-        "title": "Matematika dan Nilai-Nilai Kearifan Lokal",
-        "meta": "2016 · 1 sitasi"
-      },
-      {
-        "title": "Profil Kemampuan Penalaran Dan Komunikasi Matematika Dalam Pemecahan Masalah Matematika Ditinjau Dari Gaya Kognitif Siswa SMP Negeri 1 Watampone",
-        "meta": "Universitas Negeri Makassar, 2014 · 1 sitasi"
-      },
-      {
-        "title": "Response of mathematics teachers on 2013 curriculum aligned with scientific and authentic assessment at MTSN 1 Makassar",
-        "meta": "Core 4, 1-10, 2013 · 1 sitasi"
-      },
-      {
-        "title": "Belajar dan Pembelajaran MIPA",
-        "meta": "Lembaga Perpustakaan dan Penerbitan Universitas Muhammadiyah Makassar, 2008 · 1 sitasi"
       },
       {
         "title": "Analisis Miskonsepsi Konseptual dan Prosedural Siswa Kelas XI pada Materi Eksponen di Kepulauan Selayar",
@@ -601,12 +457,12 @@
         "meta": "International Journal on Education Insight 7 (1), 77-98, 2026"
       },
       {
-        "title": "MENUMBUHKAN KESADARAN AKAN KEBERSIHAN UNTUK HIDUP BERKELANJUTAN DI SD NEGERI BIRINGKALORO KABUPATEN GOWA",
-        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 12 (01), 71-79, 2026"
-      },
-      {
         "title": "Konsep BerMakNa Terintegrasi TPACK",
         "meta": "CV. Ruang Tentor, 2026"
+      },
+      {
+        "title": "Critical Thinking Skills of Slow Learners in Mathematical Problem-Solving: A Systematic Literature Review",
+        "meta": "Journal of Mathematics Instruction, Social Research and Opinion 4 (2), 319-332, 2025 · 1 sitasi"
       },
       {
         "title": "PENGARUH PEMAHAMAN KONSEP DAN KEMAMPUAN BERPIKIR KRITIS TERHADAP KEMAMPUAN PENYELESAIAN SOAL MATEMATIKA BERBASIS HIGHER ORDER THINKING SKILL PADA SISWA SEKOLAH DASAR",
@@ -619,6 +475,18 @@
       {
         "title": "Culturally Contextualized E-Book Based on West Papua’s Culture to Support Elementary Students’ Mathematical Connection Skills",
         "meta": "MIMBAR PGSD Undiksha 13 (1), 96-104, 2025"
+      },
+      {
+        "title": "Developing a Virtual Reality Simulation of the Michelson-Morley Experiment for Physics Education: Design, Validation, and Educational",
+        "meta": "International Journal of Learning, Teaching and Educational Research 23 (11 …, 2024 · 6 sitasi"
+      },
+      {
+        "title": "The Need for Development of Meaningful E-Module Teaching Materials to Optimize Mathematics Learning with a Focus on Critical Thinking Skills",
+        "meta": "PPSDP International Journal of Education 3 (2), 102-110, 2024 · 5 sitasi"
+      },
+      {
+        "title": "CPjBL versus PjBL instruction: the practice of reviewing literature from reputable journals",
+        "meta": "Studies in Learning and Teaching 5 (3), 581-594, 2024 · 2 sitasi"
       },
       {
         "title": "Needs Analysis of Geogebra Learning the Media Development on Geometry Transformation Material",
@@ -637,6 +505,54 @@
         "meta": "Pendas: Jurnal Ilmiah Pendidikan Dasar 9 (03), 465-474, 2024"
       },
       {
+        "title": "Peran kompetensi guru penggerak dalam meningkatkan motivasi belajar siswa sekolah dasar",
+        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 1544-1554, 2023 · 13 sitasi"
+      },
+      {
+        "title": "Nilai-nilai moral dan kepedulian pada pendidikan karakter di SD Islam Al Azhar 34 Makassar",
+        "meta": "Pendas: Jurnal Ilmiah Pendidikan Dasar 8 (2), 5957-5976, 2023 · 9 sitasi"
+      },
+      {
+        "title": "Identifikasi kesulitan berbicara siswa di SD Inpres Pakkolompo",
+        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 1726-1741, 2023 · 5 sitasi"
+      },
+      {
+        "title": "Perbandingan Motivasi dan Hasil Belajar Matematika yang Diajar Menggunakan Blended Learning Berbasis Literasi Digital dengan Konvensional pada Siswa Kelas IV SDN Mangkura 1 …",
+        "meta": "Proximal: Jurnal Penelitian Matematika Dan Pendidikan Matematika 6 (1), 1-7, 2023 · 5 sitasi"
+      },
+      {
+        "title": "The students’ representative processes in solving mathematical word problems",
+        "meta": "Knowledge 3 (1), 70-79, 2023 · 4 sitasi"
+      },
+      {
+        "title": "Analisis Kemampuan Berpikir Reflektif Dalam Menyelesaikan Soal Cerita Matematika Ditinjau Dari Gaya Belajar Pada Siswa SMA",
+        "meta": "Wacana Akademika: Majalah Ilmiah Kependidikan 7 (2), 212-224, 2023 · 3 sitasi"
+      },
+      {
+        "title": "Penerapan pembelajaran berdiferensiasi dalam mengatasi kesulitan belajar bahasa Indonesia peserta didik kelas IV sekolah dasar",
+        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 316-328, 2023 · 3 sitasi"
+      },
+      {
+        "title": "Pengaruh Pendidikan Matematika Realistis (PMR) terhadap kemampuan pemahaman konsep dan kemampuan komunikasi matematis siswa sekolah dasar di wilayah IV Kecamatan Somba Opu …",
+        "meta": "Pendas: Jurnal Ilmiah Pendidikan Dasar 8 (1), 3700-3712, 2023 · 3 sitasi"
+      },
+      {
+        "title": "Media E-Learning Bangun Ruang Sisi Datar: Kelayakan pada Pembelajaran Daring",
+        "meta": "Edu Komputika Journal 9 (2), 78-87, 2023 · 3 sitasi"
+      },
+      {
+        "title": "Pelatihan Mengajar Berbasis Problem Based Learning Berbasis Daring Pada Mahasiswa Pendidikan Guru Sekolah Dasar",
+        "meta": "2023 · 2 sitasi"
+      },
+      {
+        "title": "LOGIKA FALLACY PENYELESAIAN SOAL CERITA PADA SISWA SEKOLAH DASAR",
+        "meta": "Didaktik: Jurnal Ilmiah PGSD STKIP Subang 9 (3), 600-612, 2023 · 1 sitasi"
+      },
+      {
+        "title": "Implementasi Pendekatan STEM (Science, Technology, Engineering and Mathematics) Berbantuan Media Pembelajaran Interaktif Vlog di Sekolah Dasar",
+        "meta": "JIIP-Jurnal Ilmiah Ilmu Pendidikan 6 (4), 2648-2654, 2023 · 1 sitasi"
+      },
+      {
         "title": "Pengaruh Penerapan Pendekatan Pembelajaran Contextual Teaching and Learning Terintegrasi Budaya Lokal terhadap Motivasi dan Hasil Belajar Matematika Siswa Sekolah Dasar",
         "meta": "Sang Pencerah: Jurnal Ilmiah Universitas Muhammadiyah Buton 9 (4), 842-853, 2023"
       },
@@ -649,8 +565,76 @@
         "meta": "Jurnal Pendidikan Progresif 13 (2), 244-254, 2023"
       },
       {
+        "title": "Learning social arithmetic of low-ability student through the context of snacks and money",
+        "meta": "Indonesian Journal on Learning and Advanced Education (IJOLAE), 21-33, 2022 · 15 sitasi"
+      },
+      {
+        "title": "Proses generalisasi pola bilangan siswa SMP dalam memecahkan masalah matematika berdasarkan gaya belajar",
+        "meta": "Jurnal Axioma: Jurnal Matematika dan Pembelajaran 7 (2), 139–148-139–148, 2022 · 6 sitasi"
+      },
+      {
+        "title": "Thinking Processes of Mentally retarded: Students Disabled at Junior High School in Solving Fractions Problems",
+        "meta": "AL-ISHLAH: Jurnal Pendidikan 14 (2), 2185-2196, 2022 · 4 sitasi"
+      },
+      {
+        "title": "Pengaruh penerapan model pembelajaran kooperatif tipe scramble terhadap kemampuan komunikasi matematis siswa",
+        "meta": "Delta-Pi: Jurnal Matematika dan Pendidikan Matematika 11 (1), 20-29, 2022 · 3 sitasi"
+      },
+      {
+        "title": "Analisis kemampuan pemecahan masalah matematis siswa dalam menyelesaikan soal cerita",
+        "meta": "Infinity: Jurnal Matematika dan Aplikasinya 2 (1), 33-39, 2021 · 12 sitasi"
+      },
+      {
+        "title": "Analisis kemampuan pemecahan masalah matematis siswa dalam menyelesaikan soal cerita. Infinity: Jurnal Matematika dan Aplikasinya, 2 (1), 33–39",
+        "meta": "2021 · 5 sitasi"
+      },
+      {
+        "title": "Trigonometric Learning Design with the ",
+        "meta": "Journal of Physics: Conference Series 1899 (1), 012128, 2021 · 2 sitasi"
+      },
+      {
+        "title": "Application of Cooperative Learning Model of Type Jigsaw and Two Stay-Two Stray Towards Mathematics Learning Outcomes of Self-Confidence of Students",
+        "meta": "International Conference on Educational Studies in Mathematics (ICoESM 2021 …, 2021 · 1 sitasi"
+      },
+      {
+        "title": "Description Of Mathematical Communication Skills, Logical Thinking And Its Influence On The Ability Of Mathematical Literacy For Students Of Grade V Elementary School",
+        "meta": "2020 · 18 sitasi"
+      },
+      {
+        "title": "The application of cooperative learning model of team assisted individualization (tai) based manipulative media on topics “shape” of class vi elementary school of tombolok gowa",
+        "meta": "Daya Matematis: Jurnal Inovasi Pendidikan Matematika 7 (3), 317-327, 2020 · 15 sitasi"
+      },
+      {
+        "title": "Identifying The Influence Of Anxiety And Self-Reliance In Learning Towards Mathematics Learning Performance Of Elementary School’s Students Grade V",
+        "meta": "2020 · 9 sitasi"
+      },
+      {
+        "title": "Muhammadiyah and the Early Statehood Politics of Indonesia",
+        "meta": "Journal of Al-Islam and Muhammadiyah Studies 1 (1), 1-11, 2020 · 4 sitasi"
+      },
+      {
+        "title": "Describing mathematical communication ability, logical thinking and student learning outcome of class v elementary school in Sombaopu Makassar",
+        "meta": "International Conference on Elementary Education 2 (1), 1435-1445, 2020 · 3 sitasi"
+      },
+      {
         "title": "Uji Validitas Desain Pembelajaran Trigonometri",
         "meta": "Prosiding SI MaNIs (Seminar Nasional Integrasi Matematika dan Nilai-Nilai …, 2020"
+      },
+      {
+        "title": "The use of educational game media and its effect on student achievement of 6th grade elementary school students in mathematics learning",
+        "meta": "Mathematics, Informatics, Science, and Education International Conference …, 2019 · 6 sitasi"
+      },
+      {
+        "title": "Efektivitas Pembelajaran Matematika melalui Penggunaan Media Education Game Maju Mundur Cantik (Cari dan Tebak Instruksi) pada Siswa Kelas VII SMP Unismuh Makassar",
+        "meta": "Jurnal SIGMA (Suara Intelektual Gaya Matematika) Volume 11, 2019 · 5 sitasi"
+      },
+      {
+        "title": "Understanding hearing impairment students at SMPLB in rectangle based gender",
+        "meta": "Journal of Physics: Conference Series 1188 (1), 012077, 2019 · 3 sitasi"
+      },
+      {
+        "title": "Desain Pembelajaran Trigonometri Terintegrasi Alquran dengan Konsep Sibaliparriq sebagai Model Pembelajaran",
+        "meta": "Yayasan Ahmar Cendekia Indonesia, 2019 · 2 sitasi"
       },
       {
         "title": "Describing the Use of Educational Game Media and Its Effect on Studentsâ€™ Achievement of 6th Grade Elementary School Students in Mathematics Learning",
@@ -663,6 +647,26 @@
       {
         "title": "Trigonometri Terintegrasi AL-Quran",
         "meta": "2019"
+      },
+      {
+        "title": "STUDENT’S ERROR ANALYSIS IN FINISHING MATHEMATIC WORD PROBLEM BASED NEWMAN’S PROCEDUR VIEWED FROM MULTIPLE INTELLIGENCES",
+        "meta": "2018 · 11 sitasi"
+      },
+      {
+        "title": "Analisis Kesalahan Siswa dalam Menyelesaikan Soal Cerita Matematika berdasarkan Prosedur Newman ditinjau dari Kecenderungan Kecerdasan Majemuk",
+        "meta": "UNIVERSITAS NEGERI MAKASSAR, 2018 · 6 sitasi"
+      },
+      {
+        "title": "Analisis Kesalahan Menyelesaikan Soal-Soal Pecahan BerdasarkanTaksonomi Bloom dan Kemampuan Awal Siswa Kelas V SD Negeri Rappocini",
+        "meta": "Matematika Dan Pembelajaran 6 (2), 172-183, 2018 · 3 sitasi"
+      },
+      {
+        "title": "DESCRIPTIONS OF PEUDO THINKING IN UNDERSTANDING STUDENT CONCEPTS BASED ON THE COGNITIVE STYLE OF THE VISUALIZER AND VERBALIZER",
+        "meta": "2018 · 2 sitasi"
+      },
+      {
+        "title": "Karakteristik Pemecahan Masalah Open Ended Ditinjau dari Gaya Kognitif Siswa",
+        "meta": "Universitas Negeri Makassar, 2018 · 1 sitasi"
       },
       {
         "title": "DESKRIPSI PEMBELAJARAN MATEMATIKA BERKARAKTER DI SMP NEGERI 5 MANDAI KABUPATEN MAROS",
@@ -689,8 +693,48 @@
         "meta": "Pedoman Karya, 2018"
       },
       {
+        "title": "Analisis Kemampuan Pemecahan Masalah Matematika Ditinjau dari Pemahaman Konsep dan Kemampuan Penalaran Matematis Siswa Kelas VIII SMPN 29 Makassar",
+        "meta": "Pascasarjana, 2017 · 2 sitasi"
+      },
+      {
+        "title": "Profil Kemampuan Komunikasi Matematika pada Materi Grup Ditinjau dari Nilai IPK Mahasiswa Calon Guru Matematika Angkatan 2014 FKIP UNTAD",
+        "meta": "UNIVERSITAS NEGERI MAKASSAR, 2017 · 1 sitasi"
+      },
+      {
         "title": "Komparasi Keefektifan Pendekatan Saintifik dan Pendekatan Contextual Teaching and Learning (CTL) Setting Kooperatif dalam Pembelajaran Matematika pada Siswa Kelas VIII SMP …",
         "meta": "UNIVERSITAS NEGERI MAKASSAR, 2017"
+      },
+      {
+        "title": "Mathematical connection ability in solving mathematics problem based on initial abilities of students at SMPN 10 Bulukumba",
+        "meta": "Jurnal Daya Matematis 4 (2), 207-217, 2016 · 79 sitasi"
+      },
+      {
+        "title": "Fenomena plagiarisme mahasiswa",
+        "meta": "Jurnal Equilibrium Pendidikan Sosiologi 4 (1), 20-29, 2016 · 42 sitasi"
+      },
+      {
+        "title": "Bantuan langsung tunai",
+        "meta": "Jurnal Equilibrium, 2016 · 40 sitasi"
+      },
+      {
+        "title": "The description of relationship between mathematics charasteristic and Bugis culture values",
+        "meta": "Global journal of pure and applied mathematics 12 (4), 2765-2776, 2016 · 23 sitasi"
+      },
+      {
+        "title": "The Local Cultural Values In The Interaction Of Matematics Learning At School",
+        "meta": "2016 · 17 sitasi"
+      },
+      {
+        "title": "Risfaisal., 2016., Bantuan Langsung Tunai",
+        "meta": "Jurnal Equilibrium. FKIP Unismuh Makassar 2 (2) · 7 sitasi"
+      },
+      {
+        "title": "J urnal E quilibrium J urnal E quilibrium. Fenomena Sosial Pilihan Hidup Tidak Menikah Wanita Karier, III (1), 1–10",
+        "meta": "2016 · 5 sitasi"
+      },
+      {
+        "title": "Matematika dan Nilai-Nilai Kearifan Lokal",
+        "meta": "2016 · 1 sitasi"
       },
       {
         "title": "Matematika dan Kearifan Lokal Suatu Alternatif Pendidikan Karakter melalui Matematika dan Kearifan Lokal Budaya Bugis-Makassar",
@@ -713,6 +757,10 @@
         "meta": "Suara Muhammadiyah, 2016"
       },
       {
+        "title": "IMPLEMENTASI TEORI BELAJAR ROBERT GAGNE DALAM PEMBELAJARAN KONSEP MATEMATIKA",
+        "meta": "2015 · 27 sitasi"
+      },
+      {
         "title": "Pengembangan Perangkat Pembelajaran Berbasis Masalah dengan Pendekatan Saintifik pada Materi Bangun Ruang Sisi Lengkung Di Kelas XI SMK Negeri 1 Mamasa Kab. Mamasa",
         "meta": "UNIVERSITAS NEGERI MAKASSAR, 2015"
       },
@@ -725,6 +773,18 @@
         "meta": "Equilibrium: Jurnal Pendidikan Sosiologi 3 (2), 70271, 2015"
       },
       {
+        "title": "Adopsi konsep budaya Bugis Makassar dalam pembelajaran Matematika",
+        "meta": "Makalah Prosiding.[Online]. Tersedia: http://prosiding. unesa. ac. id …, 2014 · 2 sitasi"
+      },
+      {
+        "title": "Profil Kemampuan Penalaran Dan Komunikasi Matematika Dalam Pemecahan Masalah Matematika Ditinjau Dari Gaya Kognitif Siswa SMP Negeri 1 Watampone",
+        "meta": "Universitas Negeri Makassar, 2014 · 1 sitasi"
+      },
+      {
+        "title": "Response of mathematics teachers on 2013 curriculum aligned with scientific and authentic assessment at MTSN 1 Makassar",
+        "meta": "Core 4, 1-10, 2013 · 1 sitasi"
+      },
+      {
         "title": "STUDENT LEARNING STYLE ON MATHEMATICS THROUGH BUGIS-MAKASSAR CULTURE",
         "meta": "Indian Streams Research Journal 3 (5), 1-5, 2013"
       },
@@ -735,6 +795,34 @@
       {
         "title": "Student learning style on mathematics through bugis-makassar culture",
         "meta": "Indian Streams Research Journal 3 (5), 1-5, 2013"
+      },
+      {
+        "title": "Implementasi Budaya Bugis Makassar dalam Pembelajaran Matematika",
+        "meta": "Lembaga Penerbitan dan Perpustakaan Universitas Muhammadiyah Makassar, 2009 · 3 sitasi"
+      },
+      {
+        "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar",
+        "meta": "Disertasi. Tidak diterbitkan. Surabaya: Program Pascasarjana Universitas …, 2008 · 19 sitasi"
+      },
+      {
+        "title": "Model Pembelajaran Matematika Berbasis Budaya Bugis Makassar.[Disertasi]",
+        "meta": "Program Pascasarjana Universitas Negeri Surabaya, 2008 · 2 sitasi"
+      },
+      {
+        "title": "Belajar dan Pembelajaran MIPA",
+        "meta": "Lembaga Perpustakaan dan Penerbitan Universitas Muhammadiyah Makassar, 2008 · 1 sitasi"
+      },
+      {
+        "title": "Analisis Kesulitan Mahasiswa dalam Memahami Konsep-Konsep dalam Struktur Aljabar",
+        "meta": "Jurnal Pendidikan Matematika dan Matematika, 2001 · 3 sitasi"
+      },
+      {
+        "title": "Analisis Kesulitan Mahasiswa Matematika Dalam Memahami Konsep-konsep Dalam Sruktur Aljabar. Eksponen Vol. 3. No. 2 Hal 143",
+        "meta": "Makassar: Jurusan Matematika FMIPA UM, 2001 · 3 sitasi"
+      },
+      {
+        "title": "Pembelajaran Matematika dalam Perspektif Budaya Lokal",
+        "meta": "Makalah. Makasar: UNM, 2001 · 2 sitasi"
       },
       {
         "title": "Kesulitan mahasiswa dalam memahami konsep struktur aljabar: studi kasus pada program studi pendidikan matematika FKIP Unismuh Makassar",
@@ -804,5 +892,6 @@
       }
     ]
   },
-  "footer": "© Prof. Dr. H. Irwan Akib, M.Pd. — Ruang profil akademik dan tulisan."
+  "footer": "© Prof. Dr. H. Irwan Akib, M.Pd. — Ruang profil akademik dan tulisan.",
+  "seedVersion": 1
 }

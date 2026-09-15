@@ -1250,8 +1250,37 @@ body.lb-open { overflow: hidden; }
   .about-list { grid-template-columns: 1fr; }
   .scholar-stats { grid-template-columns: 1fr; }
   .writings-toolbar { flex-direction: column; align-items: stretch; }
-  .search-box { max-width: none; }
+  .search-box { flex: 0 0 auto; max-width: none; }
   .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* ===== Penyesuaian tipografi layar kecil (HP) ===== */
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  body { font-size: 15px; }
+  .hero-content { padding: 30px 20px; }
+  .hero-text h1 { font-size: clamp(1.75rem, 8.5vw, 2.6rem); line-height: 1.14; margin-bottom: 14px; }
+  .hero-kicker { font-size: .68rem; letter-spacing: .22em; margin-bottom: 16px; padding: 5px 12px; }
+  .hero-role { font-size: 1rem; margin-bottom: 14px; }
+  .hero-desc { font-size: .95rem; line-height: 1.65; margin-bottom: 26px; }
+  .hero-stats { gap: 14px; padding-top: 22px; }
+  .hero-stats .stat b { font-size: 1.5rem; }
+  .hero-stats .stat span { font-size: .66rem; }
+  .section { padding: 44px 0; }
+  .section-head { margin-bottom: 28px; }
+  .section-head h2 { font-size: clamp(1.5rem, 6.5vw, 2.1rem); }
+  .section-sub { font-size: .95rem; }
+  .profile-text h2 { font-size: clamp(1.45rem, 6vw, 2rem); }
+  .feature-item h4 { font-size: 1rem; }
+  .edu-card h4 { font-size: 1rem; }
+  .reader-head h1 { font-size: clamp(1.55rem, 6.5vw, 2.2rem); }
+  .prose { font-size: 1rem; line-height: 1.8; }
+  .comments-title { font-size: 1.2rem; }
+}
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+  body { font-size: 14px; }
+  .hero-kicker { font-size: .62rem; letter-spacing: .16em; }
 }
 
 /* ===== Tombol bagikan artikel ===== */

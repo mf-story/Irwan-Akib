@@ -29,13 +29,31 @@ try {
   if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
   // Bila memakai penyimpanan eksternal (Volume) yang masih kosong, salin data benih.
   if (DATA_DIR !== SEED_DIR) {
-    for (const f of ["content.json", "articles.json"]) {
-      const dst = path.join(DATA_DIR, f);
-      const src = path.join(SEED_DIR, f);
+    // articles.json: seed hanya bila belum ada (artikel dikelola lewat admin).
+    {
+      const dst = path.join(DATA_DIR, "articles.json");
+      const src = path.join(SEED_DIR, "articles.json");
       if (!fs.existsSync(dst) && fs.existsSync(src)) {
         try { fs.copyFileSync(src, dst); } catch (e) {}
       }
     }
+    // content.json (data profil): seed bila belum ada ATAU seedVersion benih lebih baru,
+    // sehingga pembaruan profil dari repositori otomatis terpasang tanpa edit manual.
+    try {
+      const dstC = path.join(DATA_DIR, "content.json");
+      const srcC = path.join(SEED_DIR, "content.json");
+      if (fs.existsSync(srcC)) {
+        const seed = JSON.parse(fs.readFileSync(srcC, "utf8"));
+        const seedVer = Number(seed.seedVersion) || 0;
+        let curVer = -1;
+        if (fs.existsSync(dstC)) {
+          try { curVer = Number(JSON.parse(fs.readFileSync(dstC, "utf8")).seedVersion) || 0; } catch (e) { curVer = 0; }
+        }
+        if (!fs.existsSync(dstC) || curVer < seedVer) {
+          fs.copyFileSync(srcC, dstC);
+        }
+      }
+    } catch (e) {}
   }
   // Pindahkan konfigurasi lama (admin.config.json di root) ke DATA_DIR bila ada.
   const OLD_CONFIG = path.join(ROOT, "admin.config.json");

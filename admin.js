@@ -123,6 +123,8 @@ const SCHEMA = [
     { key: "btnPrimaryHref", type: "select", label: "Tombol utama menuju", options: HREF_OPTS },
     { key: "btnGhost", type: "text", label: "Tombol kedua (teks)" },
     { key: "btnGhostHref", type: "select", label: "Tombol kedua menuju", options: HREF_OPTS },
+    { key: "btnTertiary", type: "text", label: "Tombol ketiga (teks)" },
+    { key: "btnTertiaryHref", type: "select", label: "Tombol ketiga menuju", options: HREF_OPTS },
     { key: "avatarImage", type: "photo", label: "Foto Profil" },
     { key: "backgroundImage", type: "photo", label: "Gambar Latar Hero (bagian atas)" },
     { key: "backgroundOpacity", type: "number", label: "Opacity Gambar Latar (0 = gelap total, 100 = foto penuh)" },

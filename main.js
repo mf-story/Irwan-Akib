@@ -89,6 +89,7 @@
         <div class="hero-actions">
           <a href="${esc(h.btnPrimaryHref || "tulisan.html")}" class="btn btn-primary">${esc(h.btnPrimary || "Baca Tulisan")}</a>
           <a href="${esc(h.btnGhostHref || "#about")}" class="btn btn-ghost">${esc(h.btnGhost || "Tentang Saya")}</a>
+          <a href="${esc(h.btnTertiaryHref || "tulisan.html")}" class="btn btn-ghost">${esc(h.btnTertiary || "Tulisan Saya")}</a>
         </div>
         <div class="hero-stats">
           ${(h.stats || []).map((s) => `<div class="stat"><b data-count="${Number(s.count) || 0}">0</b><span>${esc(s.label)}</span></div>`).join("")}
